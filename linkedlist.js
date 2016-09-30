@@ -24,7 +24,7 @@ LinkedList.prototype.insertNode = function(data){
 //add prototype function to print linked list to console
 LinkedList.prototype.printList = function(){
 	var current = this.head;
-	while(current != null){
+	while(current){
 		console.log(current.value);
 		current = current.next;
 	}
@@ -34,7 +34,7 @@ LinkedList.prototype.printList = function(){
 LinkedList.prototype.removeNode = function(data){
 	var current = this.head;
 	var prev = current;
-	while(current != null){
+	while(current){
 		if(this.head.value == data){
 			this.head = this.head.next;
 			this._length--;
@@ -53,7 +53,7 @@ LinkedList.prototype.reverseList = function(){
 	var current = this.head;
 	var prev = null;
 	var next = null;
-	while(current != null){
+	while(current){
 		next = current.next;
 		current.next = prev;
 		prev = current;
